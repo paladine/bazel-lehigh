@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package proto;
+
+option java_package = "com.example.proto";
+option java_multiple_files = true;
+
+enum EventType {
+  UNKNOWN = 0;
+  STARTED = 1;
+  IRQ = 2;
+  FINISHED = 3;
+  LAST = 4;
+}
+
+message Event {
+  int64 time_milliseconds = 1;
+  int64 uuid = 2;
+  EventType type = 3;
+}
+
+message Events {
+  int64 uuid = 1;
+  repeated Event events = 2;
+}
