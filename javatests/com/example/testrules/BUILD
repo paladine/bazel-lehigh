@@ -1,4 +1,4 @@
-load(":gen_java_tests.bzl", "gen_java_tests")
+load("//rules:gen_java_tests.bzl", "gen_java_tests")
 
 java_library(
   name = "tests",
@@ -13,5 +13,6 @@ java_library(
 gen_java_tests(
   srcs = glob(["*.java"]),
   runtime_deps = [":tests"],
+  size = "small",
 )
 
