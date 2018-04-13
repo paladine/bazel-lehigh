@@ -31,7 +31,7 @@ public class LibraryTest {
   @Test
   public void verifyLibraryGeneratedExpectedOutput_Empty() {
     assertThat(Library.combine(ImmutableList.of("one", "two", "three"), ""))
-      .isEqualTo("onetwothree");
+      .isEqualTo("onetwo+three");
   }
 
   @Test
