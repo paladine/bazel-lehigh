@@ -9,7 +9,7 @@ git_repository(
     #tag = "v0.8.1",
     commit = "1e42832fe73a7a15c33a96f31618e98a826447d5" # alternatively, latest commit on master
 )
-load("@org_pubref_rules_protobuf//java:rules.bzl", "java_proto_repositories", "nano_proto_repositories")
+load("@org_pubref_rules_protobuf//java:rules.bzl", "java_proto_repositories")
 java_proto_repositories(
 #    excludes = [
 #        "com_google_code_findbugs_jsr305",
